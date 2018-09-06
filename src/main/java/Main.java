@@ -8,7 +8,7 @@ public class Main {
         //db.getBookByTitle("Middlesex");
 
 
-        //TheSoloBookClubMainGUI gui = new TheSoloBookClubMainGUI(db);
+        TheSoloBookClubMainGUI gui = new TheSoloBookClubMainGUI(db);
 
     }
 }

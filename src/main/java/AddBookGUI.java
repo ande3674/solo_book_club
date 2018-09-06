@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class AddLookUpGUI {
+public class AddBookGUI extends JFrame {
     private JLabel titleLabel;
     private JTextField titleTextField;
     private JLabel authorLabel;
@@ -15,6 +15,22 @@ public class AddLookUpGUI {
     private JLabel reviewLabel;
     private JTextArea reviewTextArea;
     private JButton saveButton;
-    private JButton lookUpButton;
     private JButton cancelButton;
+    private JPanel mainPanel;
+
+    private BookDatabase db;
+
+    protected AddBookGUI(BookDatabase db){
+        this.db = db;
+
+        // Regular setup stuff for the window / JFrame
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        setContentPane(mainPanel);
+        setVisible(true);
+        setTitle("Add A Book To Your Reading List");
+
+        pack();
+
+        //addListeners();
+    }
 }
