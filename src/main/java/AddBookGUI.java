@@ -1,6 +1,8 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class AddBookGUI extends JFrame {
+public class AddBookGUI extends JDialog {
     private JLabel titleLabel;
     private JTextField titleTextField;
     private JLabel authorLabel;
@@ -31,6 +33,20 @@ public class AddBookGUI extends JFrame {
 
         pack();
 
-        //addListeners();
+        addListeners();
+    }
+
+    private void addListeners() {
+
+        cancelButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Dispose of this window but keep program running
+                if (JOptionPane.showConfirmDialog(AddBookGUI.this, "Exit?",
+                        "Exit", JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION){
+                    setVisible(false);
+                }
+            }
+        });
     }
 }

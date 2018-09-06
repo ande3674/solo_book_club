@@ -1,6 +1,8 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class LookUpBookGUI extends JFrame {
+public class LookUpBookGUI extends JDialog {
     private JLabel isbnLabel;
     private JTextField isbnTextField;
     private JButton lookUpBookButton;
@@ -21,6 +23,20 @@ public class LookUpBookGUI extends JFrame {
 
         pack();
 
-        //addListeners();
+        addListeners();
+    }
+
+    private void addListeners() {
+
+        cancelButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Dispose of this window but keep program running
+                if (JOptionPane.showConfirmDialog(LookUpBookGUI.this, "Exit?",
+                        "Exit", JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION){
+                    setVisible(false);
+                }
+            }
+        });
     }
 }
