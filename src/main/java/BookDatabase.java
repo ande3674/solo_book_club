@@ -18,7 +18,8 @@ public class BookDatabase {
 
     // SQL Statements
     private static final String SELECT_UNREAD_LIST = "SELECT * FROM books WHERE " + READ_COLUMN + " IS 0";
-    private static final String SELECT_BOOK_BY_ISBN = "SELECT * FROM books WHERE " + ISBN_COLUMN + " LIKE 9788581630359";
+    private static final String SELECT_BOOK_BY_ISBN = "SELECT * FROM books WHERE " + ISBN_COLUMN + " IS ";
+    private static final String SELECT_BOOK_BY_TITLE = "SELECT * FROM books WHERE " + TITLE_COLUMN + " IS '";
 
     // Constructor
     BookDatabase() {}
@@ -28,6 +29,8 @@ public class BookDatabase {
         try (Connection conn = DriverManager.getConnection(DB_CONNECTION_URL);
              Statement statement = conn.createStatement()) {
             ResultSet rs = statement.executeQuery(SELECT_UNREAD_LIST);
+
+            // vectors will store our results
             Vector<Vector> vectors = new Vector<>();
 
             String isbn, title, author;
@@ -39,7 +42,7 @@ public class BookDatabase {
                 author = rs.getString(AUTHOR_COLUMN);
                 year = rs.getInt(YEAR_COLUMN);
 
-                System.out.println("ISBN: " + isbn +  ", TITLE: " + title);
+                //System.out.println("ISBN: " + isbn +  ", TITLE: " + title);
 
                 Vector v = new Vector();
                 v.add(isbn); v.add(title); v.add(author); v.add(year);
@@ -48,7 +51,37 @@ public class BookDatabase {
             }
             rs.close();
 
+            // Now pick one of these books to return to the user as their next book to read
             return vectors;
+        }
+        catch (SQLException sqle){
+            throw new RuntimeException(sqle);
+        }
+    }
+
+    Vector getBookByISBN(String isbn) {
+
+        try (Connection conn = DriverManager.getConnection(DB_CONNECTION_URL);
+             Statement statement = conn.createStatement()) {
+
+            ResultSet rs = statement.executeQuery(SELECT_BOOK_BY_ISBN + isbn);
+
+            Vector v = new Vector();
+
+            String title, author;
+            int year;
+
+            title = rs.getString(TITLE_COLUMN);
+            author = rs.getString(AUTHOR_COLUMN);
+            year = rs.getInt(YEAR_COLUMN);
+
+            v.add(isbn); v.add(title); v.add(author); v.add(year);
+
+            rs.close();
+
+            //System.out.println("ISBN: " + isbn +  ", TITLE: " + title);
+
+            return v;
 
         }
         catch (SQLException sqle){
@@ -56,4 +89,33 @@ public class BookDatabase {
         }
     }
 
+    Vector getBookByTitle(String title) {
+
+        try (Connection conn = DriverManager.getConnection(DB_CONNECTION_URL);
+             Statement statement = conn.createStatement()) {
+
+            ResultSet rs = statement.executeQuery(SELECT_BOOK_BY_TITLE + title + "'");
+
+            Vector v = new Vector();
+
+            String isbn, author;
+            int year;
+
+            isbn = rs.getString(ISBN_COLUMN);
+            author = rs.getString(AUTHOR_COLUMN);
+            year = rs.getInt(YEAR_COLUMN);
+
+            v.add(isbn); v.add(title); v.add(author); v.add(year);
+
+            rs.close();
+
+            System.out.println("ISBN: " + isbn +  ", TITLE: " + title);
+
+            return v;
+
+        }
+        catch (SQLException sqle){
+            throw new RuntimeException(sqle);
+        }
+    }
 }
