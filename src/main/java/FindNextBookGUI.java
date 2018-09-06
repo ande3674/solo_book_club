@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
+import java.util.Vector;
 
 public class FindNextBookGUI extends JDialog { // TODO should this be a JDialog and not a JFrame ?!?
     private JLabel nextBookLabel;
@@ -36,7 +38,7 @@ public class FindNextBookGUI extends JDialog { // TODO should this be a JDialog 
         nextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                displayUnreadBook();
             }
         });
 
@@ -59,6 +61,26 @@ public class FindNextBookGUI extends JDialog { // TODO should this be a JDialog 
         // Search the database for the list of unread books using the db object's method
         // If this list contains at least one book, select one book from this list to display
         // else search google books api for a random book (can refine search later)
+        Vector<Vector> unreadBooks = db.getUnreadBooks();
+
+        // isbn, title, author, year - the format of the returned vector
+        if (unreadBooks.size() > 0){ // make sure this isn't an empty list
+            Random rand = new Random();
+            int r = rand.nextInt(unreadBooks.size());
+
+            String isbn = (String)unreadBooks.get(r).get(0);
+            String title = (String)unreadBooks.get(r).get(1);
+            String author = (String)unreadBooks.get(r).get(2);
+            //String year = (String)unreadBooks.get(0).get(3);
+
+            String buildString = "READ THIS BOOK NEXT: " + title + " by " + author + ", ISBN: " + isbn;
+
+            nextBookTextField.setText(buildString);
+
+        }
+        else{
+            // API
+        }
 
     }
 }
