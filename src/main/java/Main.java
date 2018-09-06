@@ -2,7 +2,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        TheSoloBookClubMainGUI gui = new TheSoloBookClubMainGUI();
+        BookDatabase db = new BookDatabase();
+        db.getUnreadBooks();
+        //TheSoloBookClubMainGUI gui = new TheSoloBookClubMainGUI(db);
 
     }
 }
