@@ -103,7 +103,6 @@ public class BookDatabase {
 
             v.add(isbn); v.add(title); v.add(author); v.add(year);
             //System.out.println("ISBN: " + isbn +  ", TITLE: " + title);
-
             rs.close();
 
             return v;
@@ -133,10 +132,8 @@ public class BookDatabase {
             year = rs.getInt(YEAR_COLUMN);
 
             v.add(isbn); v.add(actualTitle); v.add(author); v.add(year);
-
+            //System.out.println("ISBN: " + isbn +  ", TITLE: " + title);
             rs.close();
-
-            System.out.println("ISBN: " + isbn +  ", TITLE: " + title);
 
             return v;
 

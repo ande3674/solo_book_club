@@ -31,14 +31,15 @@ public class AddBookGUI extends JDialog {
         setVisible(true);
         setTitle("Add A Book To Your Reading List");
 
+        mainPanel.getRootPane().setDefaultButton(saveButton);
+
         pack();
 
         addListeners();
     }
 
     private void addListeners() {
-
-        // TODO this is close but is definitely not working exactly right and needs to be updated!!!!!!!!
+        // TODO this is close
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -65,8 +66,14 @@ public class AddBookGUI extends JDialog {
                     } else {
                         int status = db.addBookToDB(isbn, title, author, year, plot, read, review);
                         if (status == 1) {
+                            titleTextField.setText("");
+                            authorTextField.setText("");
+                            isbnTextField.setText("");
+                            yearTextField.setText("");
+                            reviewTextArea.setText("");
                             JOptionPane.showMessageDialog(AddBookGUI.this, "Book added " +
                                     "successfully.");
+
                         } else if (status == 0) {
                             JOptionPane.showMessageDialog(AddBookGUI.this, "There was an error " +
                                     "adding the book to your library.");

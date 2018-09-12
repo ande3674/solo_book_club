@@ -22,6 +22,8 @@ public class FindNextBookGUI extends JDialog { // should this be a JDialog and n
         setVisible(true);
         setTitle("Find Your Next Read");
 
+        mainPanel.getRootPane().setDefaultButton(nextButton);
+
         pack();
 
         // Put book information into the text bar upon opening of this window
@@ -71,7 +73,7 @@ public class FindNextBookGUI extends JDialog { // should this be a JDialog and n
             String author = (String)unreadBooks.get(r).get(2);
             //String year = (String)unreadBooks.get(0).get(3);
 
-            String buildString = "READ THIS BOOK NEXT: " + title + " by " + author + ", ISBN: " + isbn;
+            String buildString = "*" + title + " by " + author + ", ISBN: " + isbn + "*";
 
             nextBookTextField.setText(buildString);
 

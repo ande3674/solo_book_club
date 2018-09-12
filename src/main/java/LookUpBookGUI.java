@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 import java.util.Vector;
 
 // TODO look up book by title should be able to return multiple books matching the title !
+// TODO Once a book has been looked up - be able to select and edit it !
 
 public class LookUpBookGUI extends JDialog {
     private JLabel isbnLabel;
@@ -24,6 +25,8 @@ public class LookUpBookGUI extends JDialog {
         setContentPane(mainPanel);
         setVisible(true);
         setTitle("Look Up A Book");
+
+        mainPanel.getRootPane().setDefaultButton(lookUpBookButton);
 
         pack();
 
