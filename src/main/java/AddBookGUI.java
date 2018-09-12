@@ -38,6 +38,38 @@ public class AddBookGUI extends JDialog {
 
     private void addListeners() {
 
+        // TODO this is close but is definitely not working exactly right and needs to be updated!!!!!!!!
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //make sure all of the info is there
+                String isbn = isbnTextField.getText();
+                String title = titleTextField.getText();
+                String author = authorTextField.getText();
+                String yearString = yearTextField.getText();
+                int year = Integer.parseInt(yearString);
+                String plot = "";
+                String review = reviewTextArea.getText();
+
+                boolean read;
+                if (yesRadioButton.isSelected()) {
+                    read = true; }
+                else {
+                    read = false;
+                }
+
+                if ((isbn.trim() == "" || title.trim() == "" || author.trim() == "")){
+
+                    JOptionPane.showMessageDialog(AddBookGUI.this, "Error: Please enter a " +
+                                        "review if you have read the book, otherwise change read selection.");
+
+                }
+                else {
+                    db.addBookToDB(isbn, title, author, year, plot, read, review);
+                }
+            }
+        });
+
         cancelButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

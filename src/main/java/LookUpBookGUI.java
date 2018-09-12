@@ -44,7 +44,7 @@ public class LookUpBookGUI extends JDialog {
                 int year = 0;
 
                 //bookInfo = isbn, title, author, year
-                if (bookInfo.size() > 0){
+                if (bookInfo != null){
                     title = (String)bookInfo.get(1);
                     author =(String)bookInfo.get(2);
                     year = (int)bookInfo.get(3);

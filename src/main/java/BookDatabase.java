@@ -21,8 +21,32 @@ public class BookDatabase {
     private static final String SELECT_BOOK_BY_ISBN = "SELECT * FROM books WHERE " + ISBN_COLUMN + " IS ";
     private static final String SELECT_BOOK_BY_TITLE = "SELECT * FROM books WHERE " + TITLE_COLUMN + " IS '";
 
+    private static final String PREP_ADD_BOOK_TO_DB = "INSERT INTO books VALUES ( ?, ?, ?, ?, ?, ?, ? )";
+
     // Constructor
     BookDatabase() {}
+
+    // Add a book to DB
+    void addBookToDB(String isbn, String title, String author, int year, String plot, boolean read, String review){
+        try (Connection conn = DriverManager.getConnection(DB_CONNECTION_URL);
+             PreparedStatement pInsert = conn.prepareStatement(PREP_ADD_BOOK_TO_DB)) {
+            pInsert.setString(1, isbn);
+            pInsert.setString(2, title);
+            pInsert.setString(3, author);
+            pInsert.setInt(4, year);
+            pInsert.setString(5, plot);
+            pInsert.setBoolean(6, read);
+            pInsert.setString(7, review);
+
+            pInsert.executeUpdate();
+
+            pInsert.close();
+
+        }
+        catch (SQLException sqle){
+            throw new RuntimeException(sqle);
+        }
+    }
 
     // Get all books that are unread
     Vector<Vector> getUnreadBooks() {
@@ -85,7 +109,8 @@ public class BookDatabase {
 
         }
         catch (SQLException sqle){
-            throw new RuntimeException(sqle);
+            return null;
+            //throw new RuntimeException(sqle);
         }
     }
 
@@ -115,7 +140,8 @@ public class BookDatabase {
 
         }
         catch (SQLException sqle){
-            throw new RuntimeException(sqle);
+            //throw new RuntimeException(sqle);
+            return null;
         }
     }
 }
