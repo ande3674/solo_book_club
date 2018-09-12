@@ -19,7 +19,7 @@ public class BookDatabase {
     // SQL Statements
     private static final String SELECT_UNREAD_LIST = "SELECT * FROM books WHERE " + READ_COLUMN + " IS 0";
     private static final String SELECT_BOOK_BY_ISBN = "SELECT * FROM books WHERE " + ISBN_COLUMN + " IS ";
-    private static final String SELECT_BOOK_BY_TITLE = "SELECT * FROM books WHERE " + TITLE_COLUMN + " IS '";
+    private static final String SELECT_BOOK_BY_TITLE = "SELECT * FROM books WHERE " + TITLE_COLUMN + " LIKE '%";
 
     private static final String PREP_ADD_BOOK_TO_DB = "INSERT INTO books VALUES ( ?, ?, ?, ?, ?, ?, ? )";
 
@@ -27,7 +27,7 @@ public class BookDatabase {
     BookDatabase() {}
 
     // Add a book to DB
-    void addBookToDB(String isbn, String title, String author, int year, String plot, boolean read, String review){
+    int addBookToDB(String isbn, String title, String author, int year, String plot, boolean read, String review){
         try (Connection conn = DriverManager.getConnection(DB_CONNECTION_URL);
              PreparedStatement pInsert = conn.prepareStatement(PREP_ADD_BOOK_TO_DB)) {
             pInsert.setString(1, isbn);
@@ -42,9 +42,12 @@ public class BookDatabase {
 
             pInsert.close();
 
+            return 1;
+
         }
         catch (SQLException sqle){
-            throw new RuntimeException(sqle);
+            return 0;
+            //throw new RuntimeException(sqle);
         }
     }
 
@@ -74,7 +77,6 @@ public class BookDatabase {
                 vectors.add(v);
             }
             rs.close();
-
             // Now pick one of these books to return to the user as their next book to read
             return vectors;
         }
@@ -100,10 +102,9 @@ public class BookDatabase {
             year = rs.getInt(YEAR_COLUMN);
 
             v.add(isbn); v.add(title); v.add(author); v.add(year);
+            //System.out.println("ISBN: " + isbn +  ", TITLE: " + title);
 
             rs.close();
-
-            //System.out.println("ISBN: " + isbn +  ", TITLE: " + title);
 
             return v;
 
@@ -119,7 +120,7 @@ public class BookDatabase {
         try (Connection conn = DriverManager.getConnection(DB_CONNECTION_URL);
              Statement statement = conn.createStatement()) {
 
-            ResultSet rs = statement.executeQuery(SELECT_BOOK_BY_TITLE + title + "'");
+            ResultSet rs = statement.executeQuery(SELECT_BOOK_BY_TITLE + title + "%'");
 
             Vector v = new Vector();
 
@@ -127,10 +128,11 @@ public class BookDatabase {
             int year;
 
             isbn = rs.getString(ISBN_COLUMN);
+            String actualTitle = rs.getString(TITLE_COLUMN);
             author = rs.getString(AUTHOR_COLUMN);
             year = rs.getInt(YEAR_COLUMN);
 
-            v.add(isbn); v.add(title); v.add(author); v.add(year);
+            v.add(isbn); v.add(actualTitle); v.add(author); v.add(year);
 
             rs.close();
 

@@ -8,6 +8,7 @@ public class TheSoloBookClubMainGUI extends JFrame {
     private JLabel titleLabel;
     private JPanel mainPanel;
     private JButton addNewBookButton;
+    private JButton exitProgramButton;
 
     private BookDatabase db;
 
@@ -49,6 +50,16 @@ public class TheSoloBookClubMainGUI extends JFrame {
 
                 AddBookGUI abg = new AddBookGUI(db);
 
+            }
+        });
+        exitProgramButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (JOptionPane.showConfirmDialog(TheSoloBookClubMainGUI.this,
+                        "Are you sure you want to exit the program?", "Exit",
+                        JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION){
+                    System.exit(0);
+                }
             }
         });
     }

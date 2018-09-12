@@ -42,30 +42,40 @@ public class AddBookGUI extends JDialog {
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //make sure all of the info is there
-                String isbn = isbnTextField.getText();
-                String title = titleTextField.getText();
-                String author = authorTextField.getText();
-                String yearString = yearTextField.getText();
-                int year = Integer.parseInt(yearString);
-                String plot = "";
-                String review = reviewTextArea.getText();
 
-                boolean read;
-                if (yesRadioButton.isSelected()) {
-                    read = true; }
-                else {
-                    read = false;
+                try {
+                    //make sure all of the info is there
+                    String isbn = isbnTextField.getText();
+                    String title = titleTextField.getText();
+                    String author = authorTextField.getText();
+                    String yearString = yearTextField.getText();
+                    int year = Integer.parseInt(yearString);
+                    String plot = "";
+                    String review = reviewTextArea.getText();
+
+                    boolean read;
+                    if (yesRadioButton.isSelected()) {
+                        read = true;
+                    } else {
+                        read = false;
+                    }
+                    if ((isbn.trim() == "" || title.trim() == "" || author.trim() == "")) {
+                        JOptionPane.showMessageDialog(AddBookGUI.this, "Error: Please enter a " +
+                                "review if you have read the book, otherwise change read selection.");
+                    } else {
+                        int status = db.addBookToDB(isbn, title, author, year, plot, read, review);
+                        if (status == 1) {
+                            JOptionPane.showMessageDialog(AddBookGUI.this, "Book added " +
+                                    "successfully.");
+                        } else if (status == 0) {
+                            JOptionPane.showMessageDialog(AddBookGUI.this, "There was an error " +
+                                    "adding the book to your library.");
+                        }
+                    }
                 }
-
-                if ((isbn.trim() == "" || title.trim() == "" || author.trim() == "")){
-
-                    JOptionPane.showMessageDialog(AddBookGUI.this, "Error: Please enter a " +
-                                        "review if you have read the book, otherwise change read selection.");
-
-                }
-                else {
-                    db.addBookToDB(isbn, title, author, year, plot, read, review);
+                catch(Exception ex){
+                    JOptionPane.showMessageDialog(AddBookGUI.this, "There was an error adding " +
+                            "your book, please check all of your fields and try again.");
                 }
             }
         });
@@ -74,7 +84,7 @@ public class AddBookGUI extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Dispose of this window but keep program running
-                if (JOptionPane.showConfirmDialog(AddBookGUI.this, "Exit?",
+                if (JOptionPane.showConfirmDialog(AddBookGUI.this, "Exit this screen?",
                         "Exit", JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION){
                     setVisible(false);
                 }

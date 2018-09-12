@@ -46,7 +46,7 @@ public class FindNextBookGUI extends JDialog { // should this be a JDialog and n
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Dispose of this window but keep program running
-                if (JOptionPane.showConfirmDialog(FindNextBookGUI.this, "Exit?",
+                if (JOptionPane.showConfirmDialog(FindNextBookGUI.this, "Exit this screen?",
                         "Exit", JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION){
                     setVisible(false);
                 }
