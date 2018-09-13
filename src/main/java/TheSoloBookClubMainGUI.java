@@ -9,6 +9,7 @@ public class TheSoloBookClubMainGUI extends JFrame {
     private JPanel mainPanel;
     private JButton addNewBookButton;
     private JButton exitProgramButton;
+    private JButton talkToAPIButton;
 
     private BookDatabase db;
 
@@ -60,6 +61,12 @@ public class TheSoloBookClubMainGUI extends JFrame {
                         JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION){
                     System.exit(0);
                 }
+            }
+        });
+        talkToAPIButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }
