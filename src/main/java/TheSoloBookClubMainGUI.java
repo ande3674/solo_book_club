@@ -9,8 +9,6 @@ public class TheSoloBookClubMainGUI extends JFrame {
     private JPanel mainPanel;
     private JButton addNewBookButton;
     private JButton exitProgramButton;
-    private JButton talkToAPIButton;
-    private JLabel apiLabel;
 
     private BookDatabase db;
 
@@ -64,13 +62,13 @@ public class TheSoloBookClubMainGUI extends JFrame {
                 }
             }
         });
-        talkToAPIButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String apiInfo = new BookClient().getHarry();
-                apiLabel.setText(apiInfo);
-
-            }
-        });
+//        talkToAPIButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                String apiInfo = new BookClient().getHarry();
+//                apiLabel.setText(apiInfo);
+//
+//            }
+//        });
     }
 }

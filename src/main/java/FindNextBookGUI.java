@@ -10,6 +10,8 @@ public class FindNextBookGUI extends JDialog { // should this be a JDialog and n
     private JButton nextButton;
     private JButton cancelButton;
     private JPanel mainPanel;
+    private JButton lookUpOnGoogleButton;
+    private JTextArea apiInfoTextArea;
 
     private BookDatabase db;
 
