@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -30,6 +31,7 @@ public class AddBookGUI extends JDialog {
         setContentPane(mainPanel);
         setVisible(true);
         setTitle("Add A Book To Your Reading List");
+        setPreferredSize(new Dimension(600, 400));
 
         mainPanel.getRootPane().setDefaultButton(saveButton);
 

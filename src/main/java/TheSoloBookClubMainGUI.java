@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -20,6 +21,7 @@ public class TheSoloBookClubMainGUI extends JFrame {
         setContentPane(mainPanel);
         setVisible(true);
         setTitle("Ali's Solo Book Club Application");
+        setPreferredSize(new Dimension(600, 400));
 
         pack();
 
@@ -62,13 +64,5 @@ public class TheSoloBookClubMainGUI extends JFrame {
                 }
             }
         });
-//        talkToAPIButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                String apiInfo = new BookClient().getHarry();
-//                apiLabel.setText(apiInfo);
-//
-//            }
-//        });
     }
 }

@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
@@ -22,6 +23,7 @@ public class FindNextBookGUI extends JDialog { // should this be a JDialog and n
         setContentPane(mainPanel);
         setVisible(true);
         setTitle("Find Your Next Read");
+        setPreferredSize(new Dimension(600, 400));
 
         mainPanel.getRootPane().setDefaultButton(nextButton);
 
