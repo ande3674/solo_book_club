@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="75171fb7-1662-47d5-a384-2621dfbd7d24" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AddBookGUI.java" afterPath="$PROJECT_DIR$/src/main/java/AddBookGUI.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BookClient.java" afterPath="$PROJECT_DIR$/src/main/java/BookClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FindNextBookGUI.java" afterPath="$PROJECT_DIR$/src/main/java/FindNextBookGUI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -68,14 +67,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FindNextBookGUI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FindNextBookGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/FindNextBookGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+            <state relative-caret-position="-28">
+              <caret line="79" column="81" lean-forward="false" selection-start-line="79" selection-start-column="81" selection-end-line="79" selection-end-column="81" />
               <folding>
-                <marker date="1537245805972" expanded="true" signature="2163:2533" ph="{...}" />
-                <marker date="1537245805972" expanded="true" signature="2246:2521" ph="{...}" />
+                <marker date="1537297121970" expanded="true" signature="2163:2533" ph="{...}" />
+                <marker date="1537297121970" expanded="true" signature="2246:2521" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -93,16 +92,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FindNextBookGUI.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/FindNextBookGUI.form">
           <provider selected="true" editor-type-id="ui-designer">
@@ -110,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookClient.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BookClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BookClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="35" column="63" lean-forward="false" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
+            <state relative-caret-position="278">
+              <caret line="57" column="55" lean-forward="false" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -128,16 +117,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -183,10 +162,10 @@
         <option value="$PROJECT_DIR$/src/main/java/FindNextBookGUI.form" />
         <option value="$PROJECT_DIR$/src/main/java/TheSoloBookClubMainGUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/LookUpBookGUI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/FindNextBookGUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/AddBookGUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/BookClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FindNextBookGUI.java" />
       </list>
     </option>
   </component>
@@ -403,7 +382,7 @@
       <workItem from="1536899457645" duration="1842000" />
       <workItem from="1536972147478" duration="2370000" />
       <workItem from="1537225435370" duration="6331000" />
-      <workItem from="1537242927811" duration="3349000" />
+      <workItem from="1537242927811" duration="3911000" />
     </task>
     <task id="LOCAL-00001" summary="Just starting the solo library program :)">
       <created>1536124080761</created>
@@ -566,11 +545,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537246030514</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="clean up code">
+      <created>1537246599381</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1537246599381</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59638000" />
+    <option name="totallyTimeSpent" value="60200000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -593,7 +579,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18166384" sideWeight="0.40015128" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18166384" sideWeight="0.5998487" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18166384" sideWeight="0.5998487" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -644,7 +630,8 @@
     <MESSAGE value="pulls book descriptions from API" />
     <MESSAGE value="get rid of unnecessary button" />
     <MESSAGE value="program works as desired, talks to db and api." />
-    <option name="LAST_COMMIT_MESSAGE" value="program works as desired, talks to db and api." />
+    <MESSAGE value="clean up code" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean up code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -674,8 +661,8 @@
         <state relative-caret-position="1020">
           <caret line="60" column="10" lean-forward="true" selection-start-line="60" selection-start-column="10" selection-end-line="70" selection-end-column="13" />
           <folding>
-            <marker date="1537245805972" expanded="true" signature="2163:2533" ph="{...}" />
-            <marker date="1537245805972" expanded="true" signature="2246:2521" ph="{...}" />
+            <marker date="1537297121970" expanded="true" signature="2163:2533" ph="{...}" />
+            <marker date="1537297121970" expanded="true" signature="2246:2521" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -747,8 +734,8 @@
         <state relative-caret-position="408">
           <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
           <folding>
-            <marker date="1537245805972" expanded="true" signature="2163:2533" ph="{...}" />
-            <marker date="1537245805972" expanded="true" signature="2246:2521" ph="{...}" />
+            <marker date="1537297121970" expanded="true" signature="2163:2533" ph="{...}" />
+            <marker date="1537297121970" expanded="true" signature="2246:2521" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -921,17 +908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FindNextBookGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-          <folding>
-            <marker date="1537245805972" expanded="true" signature="2163:2533" ph="{...}" />
-            <marker date="1537245805972" expanded="true" signature="2246:2521" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/AddBookGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -952,9 +928,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BookClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="35" column="63" lean-forward="false" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
+        <state relative-caret-position="278">
+          <caret line="57" column="55" lean-forward="false" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FindNextBookGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="79" column="81" lean-forward="false" selection-start-line="79" selection-start-column="81" selection-end-line="79" selection-end-column="81" />
+          <folding>
+            <marker date="1537297121970" expanded="true" signature="2163:2533" ph="{...}" />
+            <marker date="1537297121970" expanded="true" signature="2246:2521" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

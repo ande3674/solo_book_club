@@ -50,6 +50,19 @@ public class BookClient {
             return USER_ERROR_MSG;
         }
     }
+    public static String getDesc2(String URL){
+        try {
+            HttpResponse<JsonNode> response = Unirest.get(URL).header("accept", "application/json").asJson();
+            JSONObject jsonObject = response.getBody().getObject();
+            JSONArray items = jsonObject.getJSONArray("items");
+            JSONObject itemsObj = items.getJSONObject(1);
+            JSONObject volInfoObj = itemsObj.getJSONObject("volumeInfo");
+            return  volInfoObj.getString("description");
+        } catch (UnirestException ue){
+            System.out.println(ue);
+            return USER_ERROR_MSG;
+        }
+    }
 
     /* These are some testing methods and shouldn't be used in the final project */
     public static String getHarry() {

@@ -77,7 +77,7 @@ public class FindNextBookGUI extends JDialog { // should this be a JDialog and n
         // Put book information into the text bar upon opening of this window
         // Search the database for the list of unread books using the db object's method
         // If this list contains at least one book, select one book from this list to display
-        // else search google books api for a random book (can refine search later)
+        // else display message for user to update their unread library book list
         Vector<Vector> unreadBooks = db.getUnreadBooks();
 
         // isbn, title, author, year - the format of the returned vector
@@ -95,12 +95,14 @@ public class FindNextBookGUI extends JDialog { // should this be a JDialog and n
             nextBookTextField.setText(buildString);
 
             String url = new BookClient().buildURL(title);
-            String info = new BookClient().getDesc(url);
+            String info = new BookClient().getDesc2(url);
             apiInfoTextArea.setText(info);
 
         }
         else{
-            // TODO API
+            JOptionPane.showMessageDialog(FindNextBookGUI.this, "You have no unread books " +
+                    "left in your library. Add some books you would like to read and try again!",
+                    "Add More Unread Books To Library", JOptionPane.OK_OPTION);
         }
     }
 }
