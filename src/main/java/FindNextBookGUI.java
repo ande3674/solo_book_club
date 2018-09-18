@@ -56,6 +56,15 @@ public class FindNextBookGUI extends JDialog { // should this be a JDialog and n
                 }
             }
         });
+
+        lookUpOnGoogleButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                String info = new BookClient().getHarryDesc();
+                apiInfoTextArea.setText(info);
+            }
+        });
     }
 
     private void displayUnreadBook() {

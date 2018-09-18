@@ -3,6 +3,7 @@ import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class BookClient {
@@ -19,6 +20,20 @@ public class BookClient {
             HttpResponse<JsonNode> response = Unirest.get(URL).header("accept", "application/json").asJson();
             JSONObject jsonObject = response.getBody().getObject();
             return  jsonObject.getString("kind");
+        } catch (UnirestException ue){
+            System.out.println(ue);
+            return USER_ERROR_MSG;
+        }
+    }
+
+    public static String getHarryDesc() {
+        try {
+            HttpResponse<JsonNode> response = Unirest.get(URL).header("accept", "application/json").asJson();
+            JSONObject jsonObject = response.getBody().getObject();
+            JSONArray items = jsonObject.getJSONArray("items");
+            JSONObject itemsObj = items.getJSONObject(0);
+            JSONObject volInfoObj = itemsObj.getJSONObject("volumeInfo");
+            return  volInfoObj.getString("description");
         } catch (UnirestException ue){
             System.out.println(ue);
             return USER_ERROR_MSG;
