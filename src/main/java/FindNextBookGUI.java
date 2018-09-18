@@ -26,6 +26,8 @@ public class FindNextBookGUI extends JDialog { // should this be a JDialog and n
 
         mainPanel.getRootPane().setDefaultButton(nextButton);
 
+        apiInfoTextArea.setLineWrap(true);
+
         pack();
 
         // Put book information into the text bar upon opening of this window
@@ -63,6 +65,7 @@ public class FindNextBookGUI extends JDialog { // should this be a JDialog and n
 
                 String info = new BookClient().getHarryDesc();
                 apiInfoTextArea.setText(info);
+
             }
         });
     }
