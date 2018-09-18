@@ -63,7 +63,9 @@ public class FindNextBookGUI extends JDialog { // should this be a JDialog and n
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                String info = new BookClient().getHarryDesc();
+                //String info = new BookClient().getHarryDesc();
+                String url = new BookClient().buildURL("Lilac Girls");
+                String info = new BookClient().getDesc(url);
                 apiInfoTextArea.setText(info);
 
             }
@@ -90,6 +92,10 @@ public class FindNextBookGUI extends JDialog { // should this be a JDialog and n
             String buildString = "*" + title + " by " + author + ", ISBN: " + isbn + "*";
 
             nextBookTextField.setText(buildString);
+
+            String url = new BookClient().buildURL(title);
+            String info = new BookClient().getDesc(url);
+            apiInfoTextArea.setText(info);
 
         }
         else{

@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="75171fb7-1662-47d5-a384-2621dfbd7d24" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BookClient.java" afterPath="$PROJECT_DIR$/src/main/java/BookClient.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FindNextBookGUI.java" afterPath="$PROJECT_DIR$/src/main/java/FindNextBookGUI.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/BookClient.class" afterPath="$PROJECT_DIR$/target/classes/BookClient.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FindNextBookGUI$1.class" afterPath="$PROJECT_DIR$/target/classes/FindNextBookGUI$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FindNextBookGUI$2.class" afterPath="$PROJECT_DIR$/target/classes/FindNextBookGUI$2.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FindNextBookGUI$3.class" afterPath="$PROJECT_DIR$/target/classes/FindNextBookGUI$3.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FindNextBookGUI.class" afterPath="$PROJECT_DIR$/target/classes/FindNextBookGUI.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,7 +62,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TheSoloBookClubMainGUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TheSoloBookClubMainGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/TheSoloBookClubMainGUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="194">
@@ -65,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FindNextBookGUI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FindNextBookGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/FindNextBookGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="64" column="46" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+            <state relative-caret-position="312">
+              <caret line="97" column="42" lean-forward="true" selection-start-line="97" selection-start-column="42" selection-end-line="97" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -101,6 +108,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/FindNextBookGUI.form">
           <provider selected="true" editor-type-id="ui-designer">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BookClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="67" column="58" lean-forward="false" selection-start-line="67" selection-start-column="58" selection-end-line="67" selection-end-column="58" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -169,8 +186,8 @@
         <option value="$PROJECT_DIR$/src/main/java/TheSoloBookClubMainGUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/TheSoloBookClubMainGUI.form" />
         <option value="$PROJECT_DIR$/src/main/java/FindNextBookGUI.form" />
-        <option value="$PROJECT_DIR$/src/main/java/FindNextBookGUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/BookClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FindNextBookGUI.java" />
       </list>
     </option>
   </component>
@@ -418,7 +435,7 @@
       <workItem from="1536722282239" duration="24105000" />
       <workItem from="1536899457645" duration="1842000" />
       <workItem from="1536972147478" duration="2370000" />
-      <workItem from="1537225435370" duration="3622000" />
+      <workItem from="1537225435370" duration="5999000" />
     </task>
     <task id="LOCAL-00001" summary="Just starting the solo library program :)">
       <created>1536124080761</created>
@@ -546,11 +563,25 @@
       <option name="project" value="LOCAL" />
       <updated>1537226430500</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Fetch the correct API info">
+      <created>1537229635743</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1537229635743</updated>
+    </task>
+    <task id="LOCAL-00020" summary="wrap the description text from the API">
+      <created>1537230962105</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1537230962105</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53580000" />
+    <option name="totallyTimeSpent" value="55957000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -571,7 +602,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18166384" sideWeight="0.40015128" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18166384" sideWeight="0.40015128" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18166384" sideWeight="0.5998487" order="2" side_tool="false" content_ui="tabs" />
@@ -619,7 +650,9 @@
     <MESSAGE value="extreme jankiness going on BUT it talks to the API -- now I just have to spend an insane amount of time figuring out what to do with the information I am getting from the API and then how to incorporate it into my program." />
     <MESSAGE value="figure out more about parsing json data" />
     <MESSAGE value="Add to GUI to prepare for accepting API info" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add to GUI to prepare for accepting API info" />
+    <MESSAGE value="Fetch the correct API info" />
+    <MESSAGE value="wrap the description text from the API" />
+    <option name="LAST_COMMIT_MESSAGE" value="wrap the description text from the API" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -759,11 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FindNextBookGUI.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TheSoloBookClubMainGUI.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
@@ -771,14 +799,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BookClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="58" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="62" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -828,14 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FindNextBookGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="64" column="46" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/LookUpBookGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -850,6 +862,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="61" column="17" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FindNextBookGUI.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BookClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="67" column="58" lean-forward="false" selection-start-line="67" selection-start-column="58" selection-end-line="67" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FindNextBookGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="97" column="42" lean-forward="true" selection-start-line="97" selection-start-column="42" selection-end-line="97" selection-end-column="42" />
           <folding />
         </state>
       </provider>

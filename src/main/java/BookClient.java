@@ -8,8 +8,11 @@ import org.json.JSONObject;
 
 public class BookClient {
 
-    private static final String URL = "https://www.googleapis.com/books/v1/volumes?q=harry+potter+inauthor:rowling" +
+    private static final String HARRY_URL = "https://www.googleapis.com/books/v1/volumes?q=harry+potter+inauthor:rowling" +
             "&key=AIzaSyAdhqZaUyS--kQ3BnAjUOmmfSc70FeCYwg";
+    private static final String LILAC_URL = "https://www.googleapis.com/books/v1/volumes?q=lilac+girls" +
+            "&key=AIzaSyAdhqZaUyS--kQ3BnAjUOmmfSc70FeCYwg";
+    private static final String EMPTY_URL1 = "https://www.googleapis.com/books/v1/volumes?q=";
     private static final String TEXT = "text"; // key for reading JSON
 
     private static final String USER_ERROR_MSG = "<html>Sorry, an error happened." +
@@ -17,7 +20,7 @@ public class BookClient {
 
     public static String getHarry() {
         try {
-            HttpResponse<JsonNode> response = Unirest.get(URL).header("accept", "application/json").asJson();
+            HttpResponse<JsonNode> response = Unirest.get(HARRY_URL).header("accept", "application/json").asJson();
             JSONObject jsonObject = response.getBody().getObject();
             return  jsonObject.getString("kind");
         } catch (UnirestException ue){
@@ -27,6 +30,40 @@ public class BookClient {
     }
 
     public static String getHarryDesc() {
+        try {
+            HttpResponse<JsonNode> response = Unirest.get(HARRY_URL).header("accept", "application/json").asJson();
+            JSONObject jsonObject = response.getBody().getObject();
+            JSONArray items = jsonObject.getJSONArray("items");
+            JSONObject itemsObj = items.getJSONObject(0);
+            JSONObject volInfoObj = itemsObj.getJSONObject("volumeInfo");
+            return  volInfoObj.getString("description");
+        } catch (UnirestException ue){
+            System.out.println(ue);
+            return USER_ERROR_MSG;
+        }
+    }
+
+    public static String buildURL(String title){
+        String url_end = "&key=AIzaSyAdhqZaUyS--kQ3BnAjUOmmfSc70FeCYwg";
+        String title_words [] = title.split(" ");
+        String build_url_title = "";
+
+        for (int i = 0 ; i < title_words.length ; i++ ){
+            if (i == title_words.length - 1){
+                build_url_title += title_words[i];
+            }
+            else {
+                build_url_title += title_words[i];
+                build_url_title += "+";
+            }
+        }
+
+        String full_URL = EMPTY_URL1 + build_url_title + url_end;
+        return full_URL;
+    }
+
+    public static String getDesc(String URL){
+
         try {
             HttpResponse<JsonNode> response = Unirest.get(URL).header("accept", "application/json").asJson();
             JSONObject jsonObject = response.getBody().getObject();
