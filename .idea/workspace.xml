@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="75171fb7-1662-47d5-a384-2621dfbd7d24" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/books.sqlite" afterPath="$PROJECT_DIR$/books.sqlite" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AddBookGUI.java" afterPath="$PROJECT_DIR$/src/main/java/AddBookGUI.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FindNextBookGUI.java" afterPath="$PROJECT_DIR$/src/main/java/FindNextBookGUI.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LookUpBookGUI.java" afterPath="$PROJECT_DIR$/src/main/java/LookUpBookGUI.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TheSoloBookClubMainGUI.java" afterPath="$PROJECT_DIR$/src/main/java/TheSoloBookClubMainGUI.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BookClient.java" afterPath="$PROJECT_DIR$/src/main/java/BookClient.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -83,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddBookGUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddBookGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/AddBookGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="33" column="50" lean-forward="false" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+            <state relative-caret-position="255">
+              <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,8 +96,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="1" />
+            <state relative-caret-position="68">
+              <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -112,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookClient.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BookClient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/BookClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="67" column="58" lean-forward="false" selection-start-line="67" selection-start-column="58" selection-end-line="67" selection-end-column="58" />
+            <state relative-caret-position="493">
+              <caret line="35" column="63" lean-forward="false" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -176,19 +174,19 @@
         <option value="$PROJECT_DIR$/src/main/java/TheSoloBookClubMain.form" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0f97fdfe-3594-461f-9759-fe8885717d52/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/AddLookUpGUI.form" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b3cb4422-5ce5-4e85-9f0f-162647c691cb/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/AddBookGUI.form" />
         <option value="$PROJECT_DIR$/src/main/java/LookUpBookGUI.form" />
         <option value="$PROJECT_DIR$/src/main/java/BookDatabase.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/TheSoloBookClubMainGUI.form" />
-        <option value="$PROJECT_DIR$/src/main/java/BookClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/FindNextBookGUI.form" />
         <option value="$PROJECT_DIR$/src/main/java/TheSoloBookClubMainGUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/LookUpBookGUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/FindNextBookGUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/AddBookGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BookClient.java" />
       </list>
     </option>
   </component>
@@ -205,10 +203,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="164" />
-    <option name="y" value="23" />
-    <option name="width" value="1167" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-3" />
+    <option name="y" value="22" />
+    <option name="width" value="857" />
     <option name="height" value="694" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -405,7 +403,7 @@
       <workItem from="1536899457645" duration="1842000" />
       <workItem from="1536972147478" duration="2370000" />
       <workItem from="1537225435370" duration="6331000" />
-      <workItem from="1537242927811" duration="2818000" />
+      <workItem from="1537242927811" duration="3349000" />
     </task>
     <task id="LOCAL-00001" summary="Just starting the solo library program :)">
       <created>1536124080761</created>
@@ -561,11 +559,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537232253753</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="program works as desired, talks to db and api.">
+      <created>1537246030502</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1537246030514</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59107000" />
+    <option name="totallyTimeSpent" value="59638000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -577,7 +582,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="164" y="23" width="1167" height="694" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -588,12 +593,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18166384" sideWeight="0.40015128" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19851577" sideWeight="0.5998487" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18166384" sideWeight="0.5998487" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16350497" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13691376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18731707" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -638,7 +643,8 @@
     <MESSAGE value="wrap the description text from the API" />
     <MESSAGE value="pulls book descriptions from API" />
     <MESSAGE value="get rid of unnecessary button" />
-    <option name="LAST_COMMIT_MESSAGE" value="get rid of unnecessary button" />
+    <MESSAGE value="program works as desired, talks to db and api." />
+    <option name="LAST_COMMIT_MESSAGE" value="program works as desired, talks to db and api." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -892,25 +898,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FindNextBookGUI.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BookClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="67" column="58" lean-forward="false" selection-start-line="67" selection-start-column="58" selection-end-line="67" selection-end-column="58" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TheSoloBookClubMainGUI.java">
@@ -944,11 +934,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/AddBookGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="33" column="50" lean-forward="false" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+        <state relative-caret-position="255">
+          <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BookClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="35" column="63" lean-forward="false" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
+          <folding />
         </state>
       </provider>
     </entry>

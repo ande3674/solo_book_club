@@ -30,7 +30,7 @@ public class AddBookGUI extends JDialog {
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setContentPane(mainPanel);
         setVisible(true);
-        setTitle("Add A Book To Your Reading List");
+        setTitle("Add A Book To Your Library");
         setPreferredSize(new Dimension(600, 400));
 
         mainPanel.getRootPane().setDefaultButton(saveButton);
@@ -41,7 +41,6 @@ public class AddBookGUI extends JDialog {
     }
 
     private void addListeners() {
-        // TODO this is close
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
