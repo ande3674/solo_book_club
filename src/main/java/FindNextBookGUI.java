@@ -10,7 +10,6 @@ public class FindNextBookGUI extends JDialog { // should this be a JDialog and n
     private JButton nextButton;
     private JButton cancelButton;
     private JPanel mainPanel;
-    private JButton lookUpOnGoogleButton;
     private JTextArea apiInfoTextArea;
 
     private BookDatabase db;
@@ -59,17 +58,17 @@ public class FindNextBookGUI extends JDialog { // should this be a JDialog and n
             }
         });
 
-        lookUpOnGoogleButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                //String info = new BookClient().getHarryDesc();
-                String url = new BookClient().buildURL("Lilac Girls");
-                String info = new BookClient().getDesc(url);
-                apiInfoTextArea.setText(info);
-
-            }
-        });
+//        lookUpOnGoogleButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//
+//                //String info = new BookClient().getHarryDesc();
+//                String url = new BookClient().buildURL("Lilac Girls");
+//                String info = new BookClient().getDesc(url);
+//                apiInfoTextArea.setText(info);
+//
+//            }
+//        });
     }
 
     private void displayUnreadBook() {

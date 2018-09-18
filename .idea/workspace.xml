@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="75171fb7-1662-47d5-a384-2621dfbd7d24" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BookClient.java" afterPath="$PROJECT_DIR$/src/main/java/BookClient.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FindNextBookGUI.form" afterPath="$PROJECT_DIR$/src/main/java/FindNextBookGUI.form" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FindNextBookGUI.java" afterPath="$PROJECT_DIR$/src/main/java/FindNextBookGUI.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/BookClient.class" afterPath="$PROJECT_DIR$/target/classes/BookClient.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/FindNextBookGUI$1.class" afterPath="$PROJECT_DIR$/target/classes/FindNextBookGUI$1.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/FindNextBookGUI$2.class" afterPath="$PROJECT_DIR$/target/classes/FindNextBookGUI$2.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FindNextBookGUI$3.class" afterPath="$PROJECT_DIR$/target/classes/FindNextBookGUI$3.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FindNextBookGUI$3.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/classes/FindNextBookGUI.class" afterPath="$PROJECT_DIR$/target/classes/FindNextBookGUI.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -72,12 +71,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FindNextBookGUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FindNextBookGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/FindNextBookGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="97" column="42" lean-forward="true" selection-start-line="97" selection-start-column="42" selection-end-line="97" selection-end-column="42" />
-              <folding />
+            <state relative-caret-position="91">
+              <caret line="60" column="10" lean-forward="true" selection-start-line="60" selection-start-column="10" selection-end-line="70" selection-end-column="13" />
+              <folding>
+                <marker date="1537232133880" expanded="true" signature="2093:2463" ph="{...}" />
+                <marker date="1537232133880" expanded="true" signature="2176:2451" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,7 +106,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FindNextBookGUI.form" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FindNextBookGUI.form" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/FindNextBookGUI.form">
           <provider selected="true" editor-type-id="ui-designer">
             <state />
@@ -185,9 +187,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/TheSoloBookClubMainGUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/TheSoloBookClubMainGUI.form" />
-        <option value="$PROJECT_DIR$/src/main/java/FindNextBookGUI.form" />
         <option value="$PROJECT_DIR$/src/main/java/BookClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/FindNextBookGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FindNextBookGUI.form" />
       </list>
     </option>
   </component>
@@ -435,7 +437,7 @@
       <workItem from="1536722282239" duration="24105000" />
       <workItem from="1536899457645" duration="1842000" />
       <workItem from="1536972147478" duration="2370000" />
-      <workItem from="1537225435370" duration="5999000" />
+      <workItem from="1537225435370" duration="6171000" />
     </task>
     <task id="LOCAL-00001" summary="Just starting the solo library program :)">
       <created>1536124080761</created>
@@ -577,11 +579,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537230962105</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="pulls book descriptions from API">
+      <created>1537232091674</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1537232091674</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55957000" />
+    <option name="totallyTimeSpent" value="56129000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -652,7 +661,8 @@
     <MESSAGE value="Add to GUI to prepare for accepting API info" />
     <MESSAGE value="Fetch the correct API info" />
     <MESSAGE value="wrap the description text from the API" />
-    <option name="LAST_COMMIT_MESSAGE" value="wrap the description text from the API" />
+    <MESSAGE value="pulls book descriptions from API" />
+    <option name="LAST_COMMIT_MESSAGE" value="pulls book descriptions from API" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -681,7 +691,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-          <folding />
+          <folding>
+            <marker date="1537232133880" expanded="true" signature="2093:2463" ph="{...}" />
+            <marker date="1537232133880" expanded="true" signature="2176:2451" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -866,11 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FindNextBookGUI.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BookClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
@@ -881,10 +889,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FindNextBookGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="97" column="42" lean-forward="true" selection-start-line="97" selection-start-column="42" selection-end-line="97" selection-end-column="42" />
-          <folding />
+        <state relative-caret-position="91">
+          <caret line="60" column="10" lean-forward="true" selection-start-line="60" selection-start-column="10" selection-end-line="70" selection-end-column="13" />
+          <folding>
+            <marker date="1537232133880" expanded="true" signature="2093:2463" ph="{...}" />
+            <marker date="1537232133880" expanded="true" signature="2176:2451" ph="{...}" />
+          </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FindNextBookGUI.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
   </component>
