@@ -19,6 +19,8 @@ public class LookUpBookGUI extends JDialog {
 
     private BookDatabase db;
 
+    private String actualTitle;
+
     protected LookUpBookGUI(BookDatabase db){
         this.db = db;
 
@@ -81,7 +83,7 @@ public class LookUpBookGUI extends JDialog {
                     Vector bookInfo = db.getBookByTitle(titleSearch);
                     // info that gets returned:
                     String isbn = "";
-                    String actualTitle = "";
+                    //String actualTitle = "";
                     String author = "";
                     int year = 0;
 
@@ -92,7 +94,7 @@ public class LookUpBookGUI extends JDialog {
                         author = (String)bookInfo.get(2);
                         year = (int)bookInfo.get(3);
 
-                        String buildString = "FOUND MATCH\n" + "ISBN: " + isbn + "\nTitle: " + actualTitle
+                        String buildString = "FOUND MATCH \n" + "ISBN: " + isbn + " \nTitle: " + actualTitle
                                 + "\nAuthor: " + author + "\nYear: " + Integer.toString(year);
                         bookInfoTextArea.setText(buildString);
                     }
@@ -110,9 +112,15 @@ public class LookUpBookGUI extends JDialog {
         addReviewButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Open a new AddBookGUI frame
-                // Populate fields with known information
-                // Call appropriate BookDatabase method to update the review
+                // What is the title and isbn?
+                //String buildString = "FOUND MATCH\n" + "ISBN: " + isbnSearch + "\nTitle: " + title
+                //                                + "\nAuthor: " + author + "\nYear: " + Integer.toString(year);
+                String bookText = bookInfoTextArea.getText();
+                String[] bookTextSplit = bookText.split(" ");
+                String isbn = bookTextSplit[3];
+
+                // Open a new UpdateReviewGUI frame
+                UpdateReviewGUI urg = new UpdateReviewGUI(db, actualTitle, isbn);
             }
         });
 
