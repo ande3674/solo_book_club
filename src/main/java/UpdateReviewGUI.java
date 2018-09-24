@@ -41,17 +41,23 @@ public class UpdateReviewGUI extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 String review = reviewTextArea.getText();
 
-                int status = db.updateReview(review, isbn);
+                if (!review.trim().equals("")) {
 
-                if (status == 1){
-                    reviewTextArea.setText("");
-                    setVisible(false);
-                    JOptionPane.showMessageDialog(UpdateReviewGUI.this, "Book review updated " +
-                            "successfully.");
+                    int status = db.updateReview(review, isbn);
+
+                    if (status == 1) {
+                        reviewTextArea.setText("");
+                        setVisible(false);
+                        JOptionPane.showMessageDialog(UpdateReviewGUI.this, "Book review updated " +
+                                "successfully.");
+                    } else if (status == 0) {
+                        JOptionPane.showMessageDialog(UpdateReviewGUI.this, "There was an error " +
+                                "updating the book review in your library.");
+                    }
                 }
-                else if (status == 0){
-                    JOptionPane.showMessageDialog(UpdateReviewGUI.this, "There was an error " +
-                            "updating the book review in your library.");
+
+                else {
+                    JOptionPane.showMessageDialog(UpdateReviewGUI.this, "Error: Enter a review.", "Error", JOptionPane.OK_OPTION);
                 }
             }
         });

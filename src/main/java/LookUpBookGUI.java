@@ -4,9 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Vector;
 
-// TODO look up book by title should be able to return multiple books matching the title !
-// TODO Once a book has been looked up - be able to select and edit it !
-
 public class LookUpBookGUI extends JDialog {
     private JLabel isbnLabel;
     private JTextField isbnTextField;
@@ -112,15 +109,22 @@ public class LookUpBookGUI extends JDialog {
         addReviewButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // What is the title and isbn?
-                //String buildString = "FOUND MATCH\n" + "ISBN: " + isbnSearch + "\nTitle: " + title
-                //                                + "\nAuthor: " + author + "\nYear: " + Integer.toString(year);
-                String bookText = bookInfoTextArea.getText();
-                String[] bookTextSplit = bookText.split(" ");
-                String isbn = bookTextSplit[3];
 
-                // Open a new UpdateReviewGUI frame
-                UpdateReviewGUI urg = new UpdateReviewGUI(db, actualTitle, isbn);
+                if (!bookInfoTextArea.getText().trim().equals("")) {
+                    // What is the title and isbn?
+                    //String buildString = "FOUND MATCH\n" + "ISBN: " + isbnSearch + "\nTitle: " + title
+                    //                                + "\nAuthor: " + author + "\nYear: " + Integer.toString(year);
+                    String bookText = bookInfoTextArea.getText();
+                    String[] bookTextSplit = bookText.split(" ");
+                    String isbn = bookTextSplit[3];
+
+                    // Open a new UpdateReviewGUI frame
+                    UpdateReviewGUI urg = new UpdateReviewGUI(db, actualTitle, isbn);
+                }
+
+                else {
+                    JOptionPane.showMessageDialog(LookUpBookGUI.this, "Must look up a book before you can add a review.", "Error", JOptionPane.OK_OPTION);
+                }
             }
         });
 
