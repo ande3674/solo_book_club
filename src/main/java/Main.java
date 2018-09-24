@@ -5,5 +5,8 @@ public class Main {
         BookDatabase db = new BookDatabase();
         TheSoloBookClubMainGUI gui = new TheSoloBookClubMainGUI(db);
 
+        // Test stuff...
+        //db.updateReview("Pretty good, 4/5 Stars", "9788581630359");
+
     }
 }

@@ -23,8 +23,31 @@ public class BookDatabase {
 
     private static final String PREP_ADD_BOOK_TO_DB = "INSERT INTO books VALUES ( ?, ?, ?, ?, ?, ?, ? )";
 
+    private static final String UPDATE_REVIEW_BEG = "UPDATE books SET " + REVIEW_COLUMN + "= '";// WHERE ISBN = ";
+    private static final String UPDATE_REVIEW_END = "' WHERE " + ISBN_COLUMN + "= ";
+    private static final String UPDATE_READ_STATUS = "UPDATE books SET " + READ_COLUMN + "=1 WHERE " + ISBN_COLUMN + "=";
+
     // Constructor
     BookDatabase() {}
+
+    int updateReview(String review, String isbn){
+        try (Connection conn = DriverManager.getConnection(DB_CONNECTION_URL);
+             Statement statement = conn.createStatement()) {
+            String fullSQLStatement1 = UPDATE_REVIEW_BEG + review + UPDATE_REVIEW_END + isbn;
+            String fullSQLStatement2 = UPDATE_READ_STATUS + isbn;
+
+            statement.executeUpdate(fullSQLStatement1);
+            statement.executeUpdate(fullSQLStatement2);
+
+            statement.close();
+
+            return 1;
+
+        }
+        catch (SQLException sqle){
+            return 0;
+        }
+    }
 
     // Add a book to DB
     int addBookToDB(String isbn, String title, String author, int year, String plot, boolean read, String review){

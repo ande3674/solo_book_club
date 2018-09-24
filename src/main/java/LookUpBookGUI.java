@@ -15,6 +15,7 @@ public class LookUpBookGUI extends JDialog {
     private JTextArea bookInfoTextArea;
     private JPanel mainPanel;
     private JTextField titleTextField;
+    private JButton addReviewButton;
 
     private BookDatabase db;
 
@@ -103,6 +104,15 @@ public class LookUpBookGUI extends JDialog {
                     JOptionPane.showMessageDialog(LookUpBookGUI.this,
                             "Error: you must enter either an ISBN or a title to search.", "Error", JOptionPane.OK_OPTION );
                 }
+            }
+        });
+
+        addReviewButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Open a new AddBookGUI frame
+                // Populate fields with known information
+                // Call appropriate BookDatabase method to update the review
             }
         });
 
