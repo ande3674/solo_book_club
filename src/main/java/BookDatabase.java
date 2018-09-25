@@ -117,14 +117,15 @@ public class BookDatabase {
 
             Vector v = new Vector();
 
-            String title, author;
+            String title, author, review;
             int year;
 
             title = rs.getString(TITLE_COLUMN);
             author = rs.getString(AUTHOR_COLUMN);
             year = rs.getInt(YEAR_COLUMN);
+            review = rs.getString(REVIEW_COLUMN);
 
-            v.add(isbn); v.add(title); v.add(author); v.add(year);
+            v.add(isbn); v.add(title); v.add(author); v.add(year); v.add(review);
             //System.out.println("ISBN: " + isbn +  ", TITLE: " + title);
             rs.close();
 
@@ -146,20 +147,20 @@ public class BookDatabase {
 
             Vector v = new Vector();
 
-            String isbn, author;
+            String isbn, author, review;
             int year;
 
             isbn = rs.getString(ISBN_COLUMN);
             String actualTitle = rs.getString(TITLE_COLUMN);
             author = rs.getString(AUTHOR_COLUMN);
             year = rs.getInt(YEAR_COLUMN);
+            review = rs.getString(REVIEW_COLUMN);
 
-            v.add(isbn); v.add(actualTitle); v.add(author); v.add(year);
-            //System.out.println("ISBN: " + isbn +  ", TITLE: " + title);
+            v.add(isbn); v.add(actualTitle); v.add(author); v.add(year); v.add(review);
+
             rs.close();
 
             return v;
-
         }
         catch (SQLException sqle){
             //throw new RuntimeException(sqle);

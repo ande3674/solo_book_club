@@ -60,14 +60,17 @@ public class LookUpBookGUI extends JDialog {
                     String title = "";
                     String author = "";
                     int year = 0;
+                    String review = "";
+
                     //bookInfo = isbn, title, author, year
                     if (bookInfo != null) {
                         title = (String) bookInfo.get(1);
                         author = (String) bookInfo.get(2);
                         year = (int) bookInfo.get(3);
+                        review = (String) bookInfo.get(4);
 
                         String buildString = "FOUND MATCH\n" + "ISBN: " + isbnSearch + "\nTitle: " + title
-                                + "\nAuthor: " + author + "\nYear: " + Integer.toString(year);
+                                + "\nAuthor: " + author + "\nYear: " + Integer.toString(year) + "\n\nReview: " + review;
                         bookInfoTextArea.setText(buildString);
 
                     } else {
@@ -83,6 +86,7 @@ public class LookUpBookGUI extends JDialog {
                     //String actualTitle = "";
                     String author = "";
                     int year = 0;
+                    String review = "";
 
                     if (bookInfo != null){
                         //isbn, title, author, year
@@ -90,9 +94,10 @@ public class LookUpBookGUI extends JDialog {
                         actualTitle = (String)bookInfo.get(1);
                         author = (String)bookInfo.get(2);
                         year = (int)bookInfo.get(3);
+                        review = (String) bookInfo.get(4);
 
                         String buildString = "FOUND MATCH \n" + "ISBN: " + isbn + " \nTitle: " + actualTitle
-                                + "\nAuthor: " + author + "\nYear: " + Integer.toString(year);
+                                + "\nAuthor: " + author + "\nYear: " + Integer.toString(year) + "\n\nReview: " + review;
                         bookInfoTextArea.setText(buildString);
                     }
                     else {
