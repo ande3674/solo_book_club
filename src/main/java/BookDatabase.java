@@ -30,27 +30,30 @@ public class BookDatabase {
     // Constructor
     BookDatabase() {}
 
-    int updateReview(String review, String isbn){
+    public int updateReview(String review, String isbn){
         try (Connection conn = DriverManager.getConnection(DB_CONNECTION_URL);
              Statement statement = conn.createStatement()) {
+            // Build full SQL statement
             String fullSQLStatement1 = UPDATE_REVIEW_BEG + review + UPDATE_REVIEW_END + isbn;
             String fullSQLStatement2 = UPDATE_READ_STATUS + isbn;
 
+            // Execute and close
             statement.executeUpdate(fullSQLStatement1);
             statement.executeUpdate(fullSQLStatement2);
-
             statement.close();
 
+            // Success...
             return 1;
 
         }
         catch (SQLException sqle){
+            // Fail...
             return 0;
         }
     }
 
     // Add a book to DB
-    int addBookToDB(String isbn, String title, String author, int year, String plot, boolean read, String review){
+    public int addBookToDB(String isbn, String title, String author, int year, String plot, boolean read, String review){
         try (Connection conn = DriverManager.getConnection(DB_CONNECTION_URL);
              PreparedStatement pInsert = conn.prepareStatement(PREP_ADD_BOOK_TO_DB)) {
             pInsert.setString(1, isbn);
@@ -75,23 +78,23 @@ public class BookDatabase {
     }
 
     // Get all books that are unread
-    Vector<Vector> getUnreadBooks() {
+    public Vector<Vector> getUnreadBooks() {
         try (Connection conn = DriverManager.getConnection(DB_CONNECTION_URL);
              Statement statement = conn.createStatement()) {
+            // Store the query results in a ResultSet !!!
             ResultSet rs = statement.executeQuery(SELECT_UNREAD_LIST);
 
             // vectors will store our results
             Vector<Vector> vectors = new Vector<>();
-
+            // The info we will take for each book in the result set
             String isbn, title, author;
             int year;
-
+            // read the result set, add each book's info to the vector
             while (rs.next()){
                 isbn = rs.getString(ISBN_COLUMN);
                 title = rs.getString(TITLE_COLUMN);
                 author = rs.getString(AUTHOR_COLUMN);
                 year = rs.getInt(YEAR_COLUMN);
-
                 //System.out.println("ISBN: " + isbn +  ", TITLE: " + title);
 
                 Vector v = new Vector();
@@ -100,7 +103,8 @@ public class BookDatabase {
                 vectors.add(v);
             }
             rs.close();
-            // Now pick one of these books to return to the user as their next book to read
+            // Now pick one of these books to return to the user as their next book to read (this will be done
+            // by the GUI - for now we will just return the full list of unread books...
             return vectors;
         }
         catch (SQLException sqle){
@@ -108,7 +112,7 @@ public class BookDatabase {
         }
     }
 
-    Vector getBookByISBN(String isbn) {
+    public Vector getBookByISBN(String isbn) {
 
         try (Connection conn = DriverManager.getConnection(DB_CONNECTION_URL);
              Statement statement = conn.createStatement()) {
@@ -138,7 +142,7 @@ public class BookDatabase {
         }
     }
 
-    Vector getBookByTitle(String title) {
+    public Vector getBookByTitle(String title) {
 
         try (Connection conn = DriverManager.getConnection(DB_CONNECTION_URL);
              Statement statement = conn.createStatement()) {

@@ -10,7 +10,7 @@ public class BookClient {
 
     private static final String URL_START = "https://www.googleapis.com/books/v1/volumes?q=";
     private static final String URL_END = "&key=AIzaSyAdhqZaUyS--kQ3BnAjUOmmfSc70FeCYwg";
-
+    // some test URLs not to be used in final project...
     private static final String HARRY_URL = "https://www.googleapis.com/books/v1/volumes?q=harry+potter+inauthor:rowling" +
             "&key=AIzaSyAdhqZaUyS--kQ3BnAjUOmmfSc70FeCYwg";
     private static final String LILAC_URL = "https://www.googleapis.com/books/v1/volumes?q=lilac+girls" +
@@ -20,6 +20,9 @@ public class BookClient {
             "<br>Good thing you are AWESOME at debugging!</html>";
 
     public static String buildURL(String title){
+        // Builds a string out of the book title to be used in the URL,
+        // ie: Harry Potter becomes Harry+Potter
+        // then it adds in the rest of the URL information using the URL constants
         String title_words [] = title.split(" ");
         String build_url_title = "";
 
@@ -32,11 +35,16 @@ public class BookClient {
                 build_url_title += "+";
             }
         }
-
+        // finish building the URL String...
         String full_URL = URL_START + build_url_title + URL_END;
         return full_URL;
     }
-
+    // Grab the book description from the Google Books API using the built URL...
+    // For whatever reason, GoogleBooks API provides several descriptions.
+    // This method gets the first one. This method is almost identical to the next method
+    // The next method gets the second description
+    // Both of these can be used, but we will use the second one because it seems that, for whatever reason,
+    // The second description has been better (in my limited experience :-) )
     public static String getDesc(String URL){
         try {
             HttpResponse<JsonNode> response = Unirest.get(URL).header("accept", "application/json").asJson();
@@ -50,6 +58,8 @@ public class BookClient {
             return USER_ERROR_MSG;
         }
     }
+    // This gets the description from the Google Books API... The API gives several descriptions for whatever reason
+    // This method gets the second one because I have found that that one is usually better than the first one
     public static String getDesc2(String URL){
         try {
             HttpResponse<JsonNode> response = Unirest.get(URL).header("accept", "application/json").asJson();
@@ -64,7 +74,9 @@ public class BookClient {
         }
     }
 
-    /* These are some testing methods and shouldn't be used in the final project */
+
+
+    /* These are some testing methods and shouldn't be used in the final project!!! */
     public static String getHarry() {
         try {
             HttpResponse<JsonNode> response = Unirest.get(HARRY_URL).header("accept", "application/json").asJson();
